@@ -21,7 +21,8 @@ const margin = {top:50, bottom: 20, left: 20, right:20};
 const barData = [];//const barData = [20, 30, 45, 10, 100, 85, 90, 100, 37];
 //Generate barData items
 for (let i = 0; i < 50; i ++) {
-	barData.push(Math.floor(Math.random()*50));
+	let myNum = Math.floor(Math.random() * 50);
+	barData.push(myNum);
 }
 
 const h = 400, w = 800, barW = 10, barOffset = 5;

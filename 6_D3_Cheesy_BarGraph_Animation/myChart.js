@@ -1,7 +1,3 @@
-
-
-
-
 //Import Json
 // d3.json("data/forecast.json", d => {
 // 	const temps = [],
@@ -21,11 +17,9 @@
 
 // Margin setUp
 const margin = {top:50, bottom: 20, left: 20, right:20};
-
-//const barData = [20, 30, 45, 10, 100, 85, 90, 100, 37];
-const barData = [];
+// Array: bar Data
+const barData = [];//const barData = [20, 30, 45, 10, 100, 85, 90, 100, 37];
 //Generate barData items
-
 for (let i = 0; i < 50; i ++) {
 	barData.push(Math.random()*50);
 }

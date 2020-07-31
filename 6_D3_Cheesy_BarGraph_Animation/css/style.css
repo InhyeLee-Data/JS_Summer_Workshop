@@ -1,0 +1,21 @@
+html {
+    font-family: 'futura-pt', helvetica, san-serif;
+}
+body {
+    margin:0; padding: 10px 100px;
+    background:  rgb(160, 160, 160,0.1);
+}
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 0.25rem; 
+}
+
+h2 {
+    
+    font-size: 1.2rem;
+    color: rgba(12, 12, 10, 0.8); 
+    font-weight: 600; 
+}

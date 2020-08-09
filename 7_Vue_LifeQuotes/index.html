@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post Via Vue</title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- <script src="https://d3js.org/d3.v5.js"></script> -->
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <hr/>
+            <h4>Vote for your favorite Life Quotes</h4>
+            <hr/>
+            <blog-post 
+                v-for="post in blogPosts"
+                :person="post.person"
+                :quote ="post.quote">
+            </blog-post>
+
+            <blog-post :person=" `Your Name Here` " :quote = "`What is your advice on life?`"></blog-post>
+
+            <hr/>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>  
+    <script>
+        Vue.component ("blog-post", {
+            // props: ["title", "description", "link"],
+            props: ["person", "quote"],
+            // style here
+            template: ` 
+            <div style="border:1px dotted #ccc; margin:10px 0; padding: 10px;">
+                <b>{{person}}</b>
+                <p>{{quote}}</p>
+                <p>{{counter}} &#9829;</p>
+                <button v-on:click="increaseCounter"> + </button>
+                <br>
+            </div>
+            `,
+            data: function(){
+                return {
+                    counter: 0
+                }            
+            },
+            methods: {
+                increaseCounter: function() {
+                    this.counter ++;
+                }
+            },
+        })
+
+        let vm = new Vue({
+            // 
+            el: '#app',
+            data: {
+                blogPosts: [{
+                    "person": "Marilyn Monroe" ,
+                    "quote": `"I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best."`
+                }, {
+                    "person": "William W. Purkey" ,
+                    "quote": `"You've gotta dance like there's nobody watching,
+                                Love like you'll never be hurt,
+                                Sing like there's nobody listening,
+                                And live like it's heaven on earth."`
+                }, {
+                    "person": "Mae West" ,
+                    "quote": `“You only live once, but if you do it right, once is enough.”`
+                }, {
+                    "person": "Oscar Wilde" ,
+                    "quote": `“To live is the rarest thing in the world. Most people exist, that is all.”`
+                },
+
+
+                ]
+                // blogPosts: [{
+                //     "title": "Hello",
+                //     "link": "#",
+                //     "description": "from New York"
+                // }, {
+                //     "title": "Hola",
+                //     "link": "#",
+                //     "description": "from Granada"
+                // }, {
+                //     "title": "A Yo",
+                //     "link": "#",
+                //     "description": "from the Hood"
+                // }, {
+                //     "title": "Annyeong",
+                //     "link": "#",
+                //     "description": "from Seoul"
+                // }, {
+                //     "title": "Ni Hao",
+                //     "link": "#",
+                //     "description": "from Shanghai"
+                // },
+                // ]
+            },
+           methods: {
+
+           }
+        })
+
+               
+    </script>
+</body>
+</html>

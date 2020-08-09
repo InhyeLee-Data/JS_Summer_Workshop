@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
+      
+        hr {
+            border-top:5px solid #3CAEA3;
+        }
+        h4 {
+            color: #3CAEA3;
+        }
     </style>
 </head>
 <body>
@@ -34,10 +41,11 @@
             props: ["person", "quote"],
             // style here
             template: ` 
-            <div style="border:1px dotted #ccc; margin:10px 0; padding: 10px;">
+            <div style="border-radius: 10px; border:2px solid #3CAEA3; margin:10px 0; padding: 10px;">
                 <b>{{person}}</b>
                 <p>{{quote}}</p>
-                <p><button v-on:click="increaseCounter" class="btn btn-danger"> &#9829; </button> &nbsp;&nbsp; {{counter}} likes </p> 
+                <p><button v-on:click="increaseCounter" class="btn btn-danger"> &#9829; </button> &nbsp;&nbsp; {{counter}} likes </p>
+                
             </div>
             `,
             data: function(){
@@ -72,6 +80,8 @@
                     "person": "Oscar Wilde" ,
                     "quote": `“To live is the rarest thing in the world. Most people exist, that is all.”`
                 },
+
+
                 ]
             },
            methods: {

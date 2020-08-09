@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Post Via Vue</title>
-    <!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
+    <title>Life Quote</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <!-- <script src="https://d3js.org/d3.v5.js"></script> -->
     <style>
-        [v-cloak] {
+      [v-cloak] {
             display: none;
         }
     </style>
@@ -18,7 +16,7 @@
     <div id="app">
         <div class="container">
             <hr/>
-            <h4>Vote for your favorite Life Quotes</h4>
+            <h4>Vote for your Favorite Life Quote</h4>
             <hr/>
             <blog-post 
                 v-for="post in blogPosts"
@@ -42,8 +40,8 @@
             <div style="border:1px dotted #ccc; margin:10px 0; padding: 10px;">
                 <b>{{person}}</b>
                 <p>{{quote}}</p>
-                <p>{{counter}} &#9829;</p>
-                <button v-on:click="increaseCounter"> + </button>
+                <p><button v-on:click="increaseCounter" class="btn btn-danger"> &#9829; </button> &nbsp;&nbsp; {{counter}} likes </p>
+                
                 <br>
             </div>
             `,
@@ -82,28 +80,6 @@
 
 
                 ]
-                // blogPosts: [{
-                //     "title": "Hello",
-                //     "link": "#",
-                //     "description": "from New York"
-                // }, {
-                //     "title": "Hola",
-                //     "link": "#",
-                //     "description": "from Granada"
-                // }, {
-                //     "title": "A Yo",
-                //     "link": "#",
-                //     "description": "from the Hood"
-                // }, {
-                //     "title": "Annyeong",
-                //     "link": "#",
-                //     "description": "from Seoul"
-                // }, {
-                //     "title": "Ni Hao",
-                //     "link": "#",
-                //     "description": "from Shanghai"
-                // },
-                // ]
             },
            methods: {
 

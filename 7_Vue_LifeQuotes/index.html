@@ -22,8 +22,13 @@
             <hr/>
             <h4>Vote for your Favorite Life Quote</h4>
             <hr/>
+            <div class="search-wrapper">
+                <label>Search Quotes: </label>
+                <input type="text" v-model="search" placeholder="Search quote.."/>
+                    
+            </div>
             <blog-post 
-                v-for="post in blogPosts"
+                v-for="post in filteredQuotes"
                 :person="post.person"
                 :quote ="post.quote">
             </blog-post>
@@ -64,6 +69,7 @@
             // 
             el: '#app',
             data: {
+                search: '',
                 blogPosts: [{
                     "person": "Marilyn Monroe" ,
                     "quote": `"I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best."`
@@ -80,9 +86,14 @@
                     "person": "Oscar Wilde" ,
                     "quote": `“To live is the rarest thing in the world. Most people exist, that is all.”`
                 },
-
-
                 ]
+            },
+            computed: {
+                filteredQuotes() {
+                return this.blogPosts.filter(post => {
+                    return post.quote.toLowerCase().includes(this.search.toLowerCase()) || post.person.toLowerCase().includes(this.search.toLowerCase()) 
+                })
+                }
             },
            methods: {
 

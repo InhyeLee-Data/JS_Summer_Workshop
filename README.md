@@ -10,4 +10,4 @@ Active Links:
 - [4. Generate 5 Films on Each Click (No Fetch)](https://inhyelee-data.github.io/JS_Summer_Workshop/4_Generate_Films_onClick(No%20Fetch)/)
 - [5. Generate 5 Films on Each Click (With Fetch)](https://inhyelee-data.github.io/JS_Summer_Workshop/5_Fetch_Generate_Films_onClick/)
 - [6. D3: Cheesy Bar Graph (Random Array)](https://inhyelee-data.github.io/JS_Summer_Workshop/6_D3_Cheesy_BarGraph_Animation/)
-- [7. Vue: Trial](https://inhyelee-data.github.io/JS_Summer_Workshop/7_Vue_LifeQuotes/)
+- [7. Vue: Life Quote Search](https://inhyelee-data.github.io/JS_Summer_Workshop/7_Vue_LifeQuotes/)
